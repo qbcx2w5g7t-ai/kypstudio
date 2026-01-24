@@ -1,14 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KYP Studio AS</title>
+  <meta name="description" content="KYP Studio AS — independent software studio based in Norway." />
+
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: rgba(255, 255, 255, 0.06);
+      --text: rgba(255, 255, 255, 0.92);
+      --muted: rgba(255, 255, 255, 0.70);
+      --line: rgba(255, 255, 255, 0.10);
+      --link: rgba(255, 255, 255, 0.92);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(120, 150, 255, 0.20), transparent 60%),
+        radial-gradient(1000px 500px at 80% 20%, rgba(170, 120, 255, 0.14), transparent 55%),
+        radial-gradient(900px 500px at 60% 90%, rgba(120, 255, 210, 0.10), transparent 60%),
+        var(--bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 18px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      letter-spacing: 0.2px;
+      font-weight: 650;
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 18px 0;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: baseline;
+      font-size: 15px;
+    }
+
+    .label {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+    }
+
+    a:hover {
+      border-bottom-color: rgba(255,255,255,0.55);
+    }
+
+    footer {
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 12.5px;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>KYP Studio AS</h1>
+  <main class="wrap">
+    <section class="card" aria-label="KYP Studio AS">
+      <h1>KYP Studio AS</h1>
+      <p class="subtitle">Independent software studio based in Norway.</p>
 
-  <p>KYP Studio AS is an independent software studio based in Norway.</p>
+      <div class="divider"></div>
 
-  <p>Contact: <a href="mailto:contact@kypstudio.com">contact@kypstudio.com</a></p>
+      <div class="row">
+        <span class="label">Contact:</span>
+        <a href="mailto:contact@kypstudio.com">contact@kypstudio.com</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> KYP Studio AS
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
