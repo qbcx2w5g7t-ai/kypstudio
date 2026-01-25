@@ -1,177 +1,340 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Season of Joy – KYP Studio AS</title>
-<meta name="description" content="KYP Studio AS – calm, thoughtful digital products.">
-<style>
-:root{
-  --bg1:#0b0f1a; --bg2:#080a12;
-  --card:rgba(255,255,255,.06);
-  --card2:rgba(255,255,255,.04);
-  --border:rgba(255,255,255,.12);
-  --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.72);
-  --muted2:rgba(255,255,255,.55);
-  --accent:#f4d27a;
-  --shadow: 0 20px 60px rgba(0,0,0,.55);
-  --radius:18px;
-  --max: 920px;
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0; font-family:var(--font);
-  color:var(--text);
-  background: radial-gradient(1200px 700px at 20% 5%, #1a2443 0%, transparent 55%),
-              radial-gradient(900px 600px at 85% 15%, #2b1e3d 0%, transparent 55%),
-              linear-gradient(180deg, var(--bg1), var(--bg2));
-}
-a{color:var(--text); text-decoration: none}
-a:hover{opacity:.9}
-header{
-  padding:18px 22px;
-  position:sticky; top:0;
-  background: rgba(8,10,18,.7);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  z-index:10;
-}
-.nav{
-  max-width:var(--max); margin:0 auto;
-  display:flex; align-items:center; justify-content:space-between; gap:16px;
-}
-.brand{display:flex; align-items:center; gap:10px; letter-spacing:.2px}
-.logo{
-  width:34px; height:34px; border-radius:12px;
-  background: linear-gradient(135deg, rgba(244,210,122,.25), rgba(255,255,255,.04));
-  border:1px solid var(--border);
-  display:grid; place-items:center;
-  box-shadow: 0 8px 30px rgba(0,0,0,.35);
-}
-.logo span{font-weight:700; color:var(--accent)}
-.brand strong{font-weight:650}
-.links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
-.links a{padding:8px 10px; border-radius:12px; color:var(--muted)}
-.links a.active, .links a:hover{color:var(--text); background: var(--card2); border:1px solid var(--border)}
-main{max-width:var(--max); margin:0 auto; padding:34px 22px 56px}
-.hero{
-  margin-top:14px;
-  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-  border:1px solid var(--border);
-  border-radius: 24px;
-  padding:28px;
-  box-shadow: var(--shadow);
-}
-.kicker{color:var(--muted); font-size:14px; letter-spacing:.2px}
-h1{margin:10px 0 8px; font-size:42px; line-height:1.05}
-h2{margin:26px 0 12px; font-size:22px}
-p{color:var(--muted); line-height:1.6; margin:10px 0}
-.grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:18px}
-.card{
-  grid-column: span 6;
-  background: var(--card);
-  border:1px solid var(--border);
-  border-radius: var(--radius);
-  padding:18px;
-}
-.card.full{grid-column: 1/-1}
-.card h3{margin:0 0 6px; font-size:16px}
-.small{font-size:13px; color:var(--muted2)}
-.badge{
-  display:inline-flex; gap:8px; align-items:center;
-  padding:8px 10px; border-radius:999px;
-  background: rgba(244,210,122,.13);
-  border:1px solid rgba(244,210,122,.35);
-  color:var(--text);
-  font-size:13px
-}
-.btnrow{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:11px 14px; border-radius:14px;
-  background: rgba(255,255,255,.08); border:1px solid var(--border);
-  color:var(--text);
-}
-.btn.primary{
-  background: rgba(244,210,122,.22);
-  border-color: rgba(244,210,122,.5);
-}
-hr{border:none; border-top:1px solid var(--border); margin:20px 0}
-footer{
-  padding:18px 22px 32px;
-  color:var(--muted2);
-  text-align:center;
-}
-article{
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 22px;
-}
-article h1{font-size:30px}
-article h2{font-size:18px}
-article p{color:var(--muted)}
-article ul{color:var(--muted); line-height:1.6}
-article li{margin:6px 0}
-pre{white-space:pre-wrap}
-@media (max-width:720px){
-  h1{font-size:34px}
-  .card{grid-column: 1/-1}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KYP Studio AS – A Season of Joy</title>
+  <meta name="description" content="A Season of Joy is an iOS app for gentle daily joy. One small joy to look forward to every day – without pressure, without noise." />
+
+  <style>
+    :root{
+      --bg0:#070A12;
+      --bg1:#0A0F1C;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.045);
+      --stroke: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.58);
+      --gold: rgba(214, 185, 120, 0.95);
+      --gold2: rgba(214, 185, 120, 0.22);
+      --shadow: 0 24px 70px rgba(0,0,0,0.55);
+      --radius: 22px;
+      --radius2: 16px;
+      --max: 1060px;
+      --pad: 22px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(1100px 700px at 18% 18%, rgba(83, 110, 255, 0.18), transparent 55%),
+        radial-gradient(900px 650px at 82% 30%, rgba(214, 185, 120, 0.14), transparent 60%),
+        radial-gradient(900px 700px at 70% 85%, rgba(170, 86, 255, 0.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      min-height:100%;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; text-decoration-color: rgba(255,255,255,0.25); }
+
+    /* Top bar */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(8, 10, 18, 0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px var(--pad);
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    .logo{
+      width: 34px; height: 34px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(214,185,120,0.22), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      color: rgba(255,255,255,0.88);
+      font-size: 14px;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+    .navlink{
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+    }
+    .navlink.active,
+    .navlink:hover{
+      text-decoration:none;
+      color: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Layout */
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 34px var(--pad) 60px;
+    }
+
+    .hero{
+      margin-top: 26px;
+      padding: 28px 30px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.035));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset: -2px;
+      background:
+        radial-gradient(900px 420px at 20% 0%, rgba(83,110,255,0.18), transparent 55%),
+        radial-gradient(700px 420px at 90% 50%, rgba(214,185,120,0.14), transparent 60%);
+      opacity: 0.9;
+      pointer-events:none;
+    }
+    .hero-inner{ position: relative; z-index: 2; }
+    .kicker{
+      text-transform: lowercase;
+      letter-spacing: 0.6px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.62);
+      margin: 0 0 8px 0;
+    }
+    h1{
+      margin: 0;
+      font-size: clamp(34px, 4.6vw, 52px);
+      letter-spacing: -0.6px;
+      line-height: 1.05;
+    }
+
+    /* HERO TAGLINE: primary + subtitle */
+    .hero-tagline{
+      margin-top: 12px;
+      margin-bottom: 18px;
+      line-height: 1.45;
+      max-width: 70ch;
+    }
+    .hero-primary{
+      display:block;
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.92);
+    }
+    .hero-secondary{
+      display:block;
+      margin-top: 0.22rem; /* close vertically */
+      font-size: 1.0rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.70); /* reduced emphasis */
+    }
+
+    .hero-actions{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      height: 40px;
+      padding: 0 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.90);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration:none !important;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+    }
+    .btn:hover{
+      background: rgba(255,255,255,0.085);
+      border-color: rgba(255,255,255,0.16);
+    }
+    .btn.gold{
+      background: linear-gradient(135deg, rgba(214,185,120,0.26), rgba(255,255,255,0.06));
+      border-color: rgba(214,185,120,0.35);
+    }
+    .btn.gold:hover{
+      background: linear-gradient(135deg, rgba(214,185,120,0.32), rgba(255,255,255,0.07));
+    }
+    .btn.disabled{
+      opacity: 0.55;
+      cursor: not-allowed;
+      pointer-events:none;
+    }
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .card{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 18px 18px 16px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    }
+    .card h3{
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      letter-spacing: 0.1px;
+    }
+    .card p{
+      margin: 0;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .wide{
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .wide h3{ margin: 0 0 8px 0; font-size: 16px; }
+    .wide p{ margin: 0; color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.5; }
+
+    hr.sep{
+      border: none;
+      height: 1px;
+      background: rgba(255,255,255,0.10);
+      margin: 28px 0 16px;
+    }
+
+    .footer{
+      text-align:center;
+      color: rgba(255,255,255,0.52);
+      font-size: 13px;
+      margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+      .hero{ padding: 24px 18px; }
+      .topbar-inner{ padding: 12px 16px; }
+      nav{ gap: 10px; }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="nav">
-    <a class="brand" href="/">
-      <div class="logo" aria-hidden="true"><span>K</span></div>
-      <strong>KYP Studio AS</strong>
-    </a>
-    <nav class="links"><a href="/" class="">Home</a><a href="/joy/" class="active">Joy</a><a href="/joy/privacy.html" class="">Privacy</a><a href="/joy/eula.html" class="">EULA</a><a href="/joy/support.html" class="">Support</a></nav>
-  </div>
-</header>
-<main>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="KYP Studio AS home">
+        <span class="logo">K</span>
+        <span>KYP Studio AS</span>
+      </a>
 
-<section class="hero">
-  <div class="kicker">iOS app</div>
-  <h1>A Season of Joy</h1>
-  <p>One small joy to look forward to every day. A gentle habit of welcoming joy into your life – without pressure, without noise.</p>
-  <div class="btnrow">
-    <a class="btn primary" href="#download">Download</a>
-    <a class="btn" href="/joy/support.html">Support</a>
-  </div>
-</section>
+      <nav aria-label="Primary">
+        <a class="navlink active" href="index.html">Home</a>
+        <a class="navlink" href="#app">A Season of Joy</a>
+        <a class="navlink" href="privacy.html">Privacy</a>
+        <a class="navlink" href="eula.html">EULA</a>
+        <a class="navlink" href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="grid">
-  <div class="card">
-    <h3>Daily reveal</h3>
-    <p>Open a daily prompt when it feels right, then mark it done when you are ready.</p>
-  </div>
-  <div class="card">
-    <h3>Your own activities</h3>
-    <p>Create a personal list of joyful activities and themes that fit your life.</p>
-  </div>
-  <div class="card">
-    <h3>Streaks, gently</h3>
-    <p>Celebrate consistency – and start again any day. Joy always welcomes you back.</p>
-  </div>
-  <div class="card">
-    <h3>Privacy-first</h3>
-    <p>No account required. Optional sync through your own iCloud when enabled.</p>
-  </div>
-  <div class="card full" id="download">
-    <h3>Download</h3>
-    <p class="small">Coming to the App Store. The download link will appear here once released.</p>
-  </div>
-</section>
+  <main class="wrap" id="app">
+    <section class="hero" aria-label="A Season of Joy">
+      <div class="hero-inner">
+        <p class="kicker">iOS app</p>
+        <h1>A Season of Joy</h1>
 
-<hr>
-<p class="small">Legal: <a href="/joy/privacy.html">Privacy Policy</a> · <a href="/joy/eula.html">EULA</a></p>
+        <p class="hero-tagline">
+          <span class="hero-primary">One small joy to look forward to every day.</span>
+          <span class="hero-secondary">A gentle habit of welcoming joy into your life – without pressure, without noise.</span>
+        </p>
 
-</main>
-<footer>© 2026 KYP Studio AS · contact@kypstudio.com</footer>
+        <div class="hero-actions">
+          <a class="btn gold disabled" href="#" aria-disabled="true" title="Coming soon">Download</a>
+          <a class="btn" href="support.html">Support</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid" aria-label="Key features">
+      <div class="card">
+        <h3>Daily reveal</h3>
+        <p>Open a daily prompt when it feels right, then mark it done when you are ready.</p>
+      </div>
+
+      <div class="card">
+        <h3>Your own activities</h3>
+        <p>Create a personal list of joyful activities and themes that fit your life.</p>
+      </div>
+
+      <div class="card">
+        <h3>Streaks, gently</h3>
+        <p>Celebrate consistency – and start again any day. Joy always welcomes you back.</p>
+      </div>
+
+      <div class="card">
+        <h3>Privacy-first</h3>
+        <p>No account required. Optional sync through your own iCloud when enabled.</p>
+      </div>
+    </div>
+
+    <div class="wide" aria-label="Download section">
+      <h3>Download</h3>
+      <p>Coming to the App Store. The download link will appear here once released.</p>
+    </div>
+
+    <hr class="sep" />
+
+    <p style="color: rgba(255,255,255,0.62); font-size: 14px; margin: 0;">
+      Legal:
+      <a href="privacy.html">Privacy Policy</a>
+      ·
+      <a href="eula.html">EULA</a>
+    </p>
+
+    <div class="footer">
+      © 2026 KYP Studio AS · <a href="mailto:contact@kypstudio.com">contact@kypstudio.com</a>
+    </div>
+  </main>
 </body>
 </html>
