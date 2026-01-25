@@ -117,6 +117,42 @@ article p{color:var(--muted)}
 article ul{color:var(--muted); line-height:1.6}
 article li{margin:6px 0}
 pre{white-space:pre-wrap}
+/* About / narrative section */
+.intro{
+  margin-top:18px;
+}
+.intro .card{
+  grid-column: 1 / -1;
+}
+.intro p{
+  margin: 10px 0;
+}
+.intro .lede{
+  font-size: 16px;
+  color: var(--text);
+  opacity: .92;
+}
+.intro .soft{
+  color: var(--muted);
+}
+.intro .quote{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(244,210,122,.08);
+  border: 1px solid rgba(244,210,122,.22);
+}
+.intro .quote p{
+  margin: 0;
+  color: var(--text);
+  opacity: .92;
+  line-height: 1.55;
+}
+.intro .quote .lines{
+  margin-top: 8px;
+  color: var(--muted);
+  white-space: pre-line;
+}
 @media (max-width:720px){
   h1{font-size:34px}
   .card{grid-column: 1/-1}
@@ -156,6 +192,42 @@ pre{white-space:pre-wrap}
   </div>
 </section>
 
+<section class="grid intro" aria-label="About A Season of Joy">
+  <div class="card full">
+    <h3>About the app</h3>
+
+    <p class="lede"><strong>Days can get busy.</strong></p>
+
+    <p class="soft">
+      They are often driven by things we have to do – meetings, obligations, and to-do lists that never seem to end.
+    </p>
+
+    <p class="soft">
+      In the middle of that, it is easy to fall into the trap of letting go of the things that bring you joy.
+    </p>
+
+    <p class="soft">
+      <strong>A Season of Joy</strong> is created in recognition of the importance and power of instead <em>adding</em>
+      in activities that you <em>want</em> to do – activities you genuinely look forward to.
+    </p>
+
+    <p class="soft">
+      A joy activity can be anything – big or small – as long as it makes you smile,
+      sparks anticipation, or simply feels good to think about.
+    </p>
+
+    <p class="soft">
+      The app supports you by helping ensure that you have at least one thing to look forward to each day.
+    </p>
+
+    <div class="quote">
+      <p><strong>Not as a task.</strong></p>
+      <p class="lines">Not as a goal to optimize.
+But as a gentle reminder to listen to what you feel like doing.</p>
+    </div>
+  </div>
+</section>
+  
 <section class="grid">
   <div class="card">
     <h3>Daily reveal</h3>
