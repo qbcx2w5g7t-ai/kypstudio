@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EULA – Joy</title>
+<meta name="description" content="KYP Studio AS – calm, thoughtful digital products.">
+<style>
+:root{
+  --bg1:#0b0f1a; --bg2:#080a12;
+  --card:rgba(255,255,255,.06);
+  --card2:rgba(255,255,255,.04);
+  --border:rgba(255,255,255,.12);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.72);
+  --muted2:rgba(255,255,255,.55);
+  --accent:#f4d27a;
+  --shadow: 0 20px 60px rgba(0,0,0,.55);
+  --radius:18px;
+  --max: 920px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:var(--font);
+  color:var(--text);
+  background: radial-gradient(1200px 700px at 20% 5%, #1a2443 0%, transparent 55%),
+              radial-gradient(900px 600px at 85% 15%, #2b1e3d 0%, transparent 55%),
+              linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+a{color:var(--text); text-decoration: none}
+a:hover{opacity:.9}
+header{
+  padding:18px 22px;
+  position:sticky; top:0;
+  background: rgba(8,10,18,.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index:10;
+}
+.nav{
+  max-width:var(--max); margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.brand{display:flex; align-items:center; gap:10px; letter-spacing:.2px}
+.logo{
+  width:34px; height:34px; border-radius:12px;
+  background: linear-gradient(135deg, rgba(244,210,122,.25), rgba(255,255,255,.04));
+  border:1px solid var(--border);
+  display:grid; place-items:center;
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+.logo span{font-weight:700; color:var(--accent)}
+.brand strong{font-weight:650}
+.links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+.links a{padding:8px 10px; border-radius:12px; color:var(--muted)}
+.links a.active, .links a:hover{color:var(--text); background: var(--card2); border:1px solid var(--border)}
+main{max-width:var(--max); margin:0 auto; padding:34px 22px 56px}
+.hero{
+  margin-top:14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  border:1px solid var(--border);
+  border-radius: 24px;
+  padding:28px;
+  box-shadow: var(--shadow);
+}
+.kicker{color:var(--muted); font-size:14px; letter-spacing:.2px}
+h1{margin:10px 0 8px; font-size:42px; line-height:1.05}
+h2{margin:26px 0 12px; font-size:22px}
+p{color:var(--muted); line-height:1.6; margin:10px 0}
+.grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:18px}
+.card{
+  grid-column: span 6;
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:18px;
+}
+.card.full{grid-column: 1/-1}
+.card h3{margin:0 0 6px; font-size:16px}
+.small{font-size:13px; color:var(--muted2)}
+.badge{
+  display:inline-flex; gap:8px; align-items:center;
+  padding:8px 10px; border-radius:999px;
+  background: rgba(244,210,122,.13);
+  border:1px solid rgba(244,210,122,.35);
+  color:var(--text);
+  font-size:13px
+}
+.btnrow{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:11px 14px; border-radius:14px;
+  background: rgba(255,255,255,.08); border:1px solid var(--border);
+  color:var(--text);
+}
+.btn.primary{
+  background: rgba(244,210,122,.22);
+  border-color: rgba(244,210,122,.5);
+}
+hr{border:none; border-top:1px solid var(--border); margin:20px 0}
+footer{
+  padding:18px 22px 32px;
+  color:var(--muted2);
+  text-align:center;
+}
+article{
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+}
+article h1{font-size:30px}
+article h2{font-size:18px}
+article p{color:var(--muted)}
+article ul{color:var(--muted); line-height:1.6}
+article li{margin:6px 0}
+pre{white-space:pre-wrap}
+@media (max-width:720px){
+  h1{font-size:34px}
+  .card{grid-column: 1/-1}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="/">
+      <div class="logo" aria-hidden="true"><span>K</span></div>
+      <strong>KYP Studio AS</strong>
+    </a>
+    <nav class="links"><a href="/" class="">Home</a><a href="/joy/" class="">Joy</a><a href="/joy/privacy.html" class="">Privacy</a><a href="/joy/eula.html" class="active">EULA</a><a href="/joy/support.html" class="">Support</a></nav>
+  </div>
+</header>
+<main>
+
+<article>
+  <h1>End User License Agreement (EULA) – Joy</h1>
+  <p>This End User License Agreement (“Agreement”) is between you (“User”) and KYP Studio AS (“Developer”) and governs your use of the Joy application (“App”).</p>
+<p>By downloading or using the App, you agree to this Agreement.</p>
+<h2>1. License</h2>
+<p>Developer grants you a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes, in accordance with this Agreement and applicable App Store rules.</p>
+<h2>2. Ownership</h2>
+<p>The App, including its design, functionality, and content provided by Developer, is owned by KYP Studio AS and protected by applicable intellectual property laws.</p>
+<p>You retain ownership of any personal content you create in the App.</p>
+<h2>3. Personal content and synchronization</h2>
+<p>Joy allows you to create personal content such as notes and preferred activities.</p>
+<p>This content is stored locally on your device</p>
+<p>If iCloud synchronization is enabled, the content is securely synced via Apple CloudKit to your private iCloud account</p>
+<p>Developer does not access, read, analyze, or store copies of your personal content</p>
+<p>Synchronization can be enabled or disabled through your device or iCloud settings.</p>
+<h2>4. Subscriptions and purchases</h2>
+<p>If the App offers subscriptions or paid features:</p>
+<p>Payments are processed by Apple through In-App Purchases</p>
+<p>Subscription pricing, renewal, and cancellation are managed by Apple</p>
+<p>Developer does not receive or store your payment information</p>
+<h2>5. Acceptable use</h2>
+<p>You agree not to:</p>
+<p>Use the App in any unlawful manner</p>
+<p>Attempt to reverse engineer, modify, or interfere with the App</p>
+<p>Use the App in a way that disrupts its normal operation</p>
+<h2>6. No medical or professional advice</h2>
+<p>Joy is intended for personal enjoyment and everyday use.</p>
+<p>The App does not provide medical, psychological, or therapeutic advice and is not a substitute for professional care.</p>
+<h2>7. Disclaimer of warranties</h2>
+<p>The App is provided “as is” and “as available”.</p>
+<p>Developer makes no warranties regarding accuracy, availability, reliability, or suitability of the App for any particular purpose.</p>
+<h2>8. Limitation of liability</h2>
+<p>To the maximum extent permitted by law, KYP Studio AS shall not be liable for any indirect, incidental, or consequential damages arising out of or in connection with your use of the App.</p>
+<p>Nothing in this Agreement limits liability that cannot be excluded under applicable law.</p>
+<h2>9. Termination</h2>
+<p>This Agreement is effective until terminated.</p>
+<p>You may terminate it at any time by uninstalling the App.</p>
+<p>Developer may terminate this Agreement if you materially breach its terms.</p>
+<h2>10. Governing law</h2>
+<p>This Agreement is governed by the laws of Norway.</p>
+<h2>11. Contact</h2>
+<p>If you have any questions about this Agreement or the App, please contact:</p>
+<p>contact@kypstudio.com</p>
+</article>
+
+</main>
+<footer>© 2026 KYP Studio AS · contact@kypstudio.com</footer>
+</body>
+</html>

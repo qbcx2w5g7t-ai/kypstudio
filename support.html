@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support – Joy</title>
+<meta name="description" content="KYP Studio AS – calm, thoughtful digital products.">
+<style>
+:root{
+  --bg1:#0b0f1a; --bg2:#080a12;
+  --card:rgba(255,255,255,.06);
+  --card2:rgba(255,255,255,.04);
+  --border:rgba(255,255,255,.12);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.72);
+  --muted2:rgba(255,255,255,.55);
+  --accent:#f4d27a;
+  --shadow: 0 20px 60px rgba(0,0,0,.55);
+  --radius:18px;
+  --max: 920px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:var(--font);
+  color:var(--text);
+  background: radial-gradient(1200px 700px at 20% 5%, #1a2443 0%, transparent 55%),
+              radial-gradient(900px 600px at 85% 15%, #2b1e3d 0%, transparent 55%),
+              linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+a{color:var(--text); text-decoration: none}
+a:hover{opacity:.9}
+header{
+  padding:18px 22px;
+  position:sticky; top:0;
+  background: rgba(8,10,18,.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index:10;
+}
+.nav{
+  max-width:var(--max); margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.brand{display:flex; align-items:center; gap:10px; letter-spacing:.2px}
+.logo{
+  width:34px; height:34px; border-radius:12px;
+  background: linear-gradient(135deg, rgba(244,210,122,.25), rgba(255,255,255,.04));
+  border:1px solid var(--border);
+  display:grid; place-items:center;
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+.logo span{font-weight:700; color:var(--accent)}
+.brand strong{font-weight:650}
+.links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+.links a{padding:8px 10px; border-radius:12px; color:var(--muted)}
+.links a.active, .links a:hover{color:var(--text); background: var(--card2); border:1px solid var(--border)}
+main{max-width:var(--max); margin:0 auto; padding:34px 22px 56px}
+.hero{
+  margin-top:14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  border:1px solid var(--border);
+  border-radius: 24px;
+  padding:28px;
+  box-shadow: var(--shadow);
+}
+.kicker{color:var(--muted); font-size:14px; letter-spacing:.2px}
+h1{margin:10px 0 8px; font-size:42px; line-height:1.05}
+h2{margin:26px 0 12px; font-size:22px}
+p{color:var(--muted); line-height:1.6; margin:10px 0}
+.grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:18px}
+.card{
+  grid-column: span 6;
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:18px;
+}
+.card.full{grid-column: 1/-1}
+.card h3{margin:0 0 6px; font-size:16px}
+.small{font-size:13px; color:var(--muted2)}
+.badge{
+  display:inline-flex; gap:8px; align-items:center;
+  padding:8px 10px; border-radius:999px;
+  background: rgba(244,210,122,.13);
+  border:1px solid rgba(244,210,122,.35);
+  color:var(--text);
+  font-size:13px
+}
+.btnrow{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:11px 14px; border-radius:14px;
+  background: rgba(255,255,255,.08); border:1px solid var(--border);
+  color:var(--text);
+}
+.btn.primary{
+  background: rgba(244,210,122,.22);
+  border-color: rgba(244,210,122,.5);
+}
+hr{border:none; border-top:1px solid var(--border); margin:20px 0}
+footer{
+  padding:18px 22px 32px;
+  color:var(--muted2);
+  text-align:center;
+}
+article{
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+}
+article h1{font-size:30px}
+article h2{font-size:18px}
+article p{color:var(--muted)}
+article ul{color:var(--muted); line-height:1.6}
+article li{margin:6px 0}
+pre{white-space:pre-wrap}
+@media (max-width:720px){
+  h1{font-size:34px}
+  .card{grid-column: 1/-1}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="/">
+      <div class="logo" aria-hidden="true"><span>K</span></div>
+      <strong>KYP Studio AS</strong>
+    </a>
+    <nav class="links"><a href="/" class="">Home</a><a href="/joy/" class="">Joy</a><a href="/joy/privacy.html" class="">Privacy</a><a href="/joy/eula.html" class="">EULA</a><a href="/joy/support.html" class="active">Support</a></nav>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="kicker">Support</div>
+  <h1>Joy support</h1>
+  <p>If you need help, have feedback, or want to report a bug, please email us.</p>
+  <div class="btnrow">
+    <a class="btn primary" href="mailto:contact@kypstudio.com?subject=Joy%20support">Email support</a>
+  </div>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h3>What to include</h3>
+    <p class="small">To help us respond quickly, please include:</p>
+    <ul class="small">
+      <li>Your iPhone model and iOS version</li>
+      <li>App version (Settings → About)</li>
+      <li>What you expected vs. what happened</li>
+      <li>Screenshots if relevant</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Data and privacy</h3>
+    <p class="small">We cannot access your iCloud data. If you need help with sync issues, describe what you see and whether iCloud sync is enabled on your device.</p>
+    <div class="btnrow">
+      <a class="btn" href="/joy/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="card full">
+    <h3>Legal</h3>
+    <div class="btnrow">
+      <a class="btn" href="/joy/eula.html">EULA</a>
+      <a class="btn" href="/joy/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>© 2026 KYP Studio AS · contact@kypstudio.com</footer>
+</body>
+</html>
