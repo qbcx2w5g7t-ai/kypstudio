@@ -78,12 +78,20 @@ p{color:var(--muted); line-height:1.6; margin:10px 0}
   padding:18px;
 }
 .card.full{grid-column: 1/-1}
+.card.full.about{
+  margin-top: 18px;   /* avstand fra hero */
+}
+.about-callout{
+  margin-top:16px;
+  background: rgba(244,210,122,.07);
+  border-color: rgba(244,210,122,.18);
+}
 .card h3{margin:0 0 6px; font-size:16px}
 .small{font-size:13px; color:var(--muted2)}
 .section-title{
-  margin-top: 32px;        /* mer luft over */
+  margin-top: 0;
   margin-bottom: 14px;
-  font-size: 18px;         /* litt større enn card-h3 */
+  font-size: 18px;
   letter-spacing: .2px;
   color: var(--text);
 }
@@ -124,42 +132,7 @@ article p{color:var(--muted)}
 article ul{color:var(--muted); line-height:1.6}
 article li{margin:6px 0}
 pre{white-space:pre-wrap}
-/* About / narrative section */
-.intro{
-  margin-top:18px;
-}
-.intro .card{
-  grid-column: 1 / -1;
-}
-.intro p{
-  margin: 10px 0;
-}
-.intro .lede{
-  font-size: 16px;
-  color: var(--text);
-  opacity: .92;
-}
-.intro .soft{
-  color: var(--muted);
-}
-.intro .quote{
-  margin-top: 14px;
-  padding: 14px;
-  border-radius: 14px;
-  background: rgba(244,210,122,.08);
-  border: 1px solid rgba(244,210,122,.22);
-}
-.intro .quote p{
-  margin: 0;
-  color: var(--text);
-  opacity: .92;
-  line-height: 1.55;
-}
-.intro .quote .lines{
-  margin-top: 8px;
-  color: var(--muted);
-  white-space: pre-line;
-}
+  
 @media (max-width:720px){
   h1{font-size:34px}
   .card{grid-column: 1/-1}
@@ -199,7 +172,7 @@ pre{white-space:pre-wrap}
   </div>
 </section>
 
-<section class="card full">
+<section class="card full about">
   <h3 class="section-title">About the app</h3>
 
   <p><strong>Days can get busy.</strong></p>
@@ -230,7 +203,7 @@ pre{white-space:pre-wrap}
     to look forward to each day.
   </p>
 
-  <div class="card" style="margin-top:16px">
+  <div class="card about-callout">
     <p><strong>Not as a task.</strong></p>
     <p>Not as a goal to optimize.</p>
     <p>But as a gentle reminder to listen to what you feel like doing.</p>
