@@ -61,10 +61,16 @@ header{
 }
 main{max-width:var(--max); margin:0 auto; padding:34px 22px 56px}
 article{
-  background: rgba(255,255,255,.04);
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.045) 0%,
+    rgba(255,255,255,.04) 78%,
+    rgba(255,255,255,.02) 100%
+  );
   border:1px solid var(--border);
   border-radius:18px;
   padding:22px;
+  padding-bottom:30px;
 }
 article h1{font-size:30px}
 article h2{font-size:18px; margin-top:26px}
