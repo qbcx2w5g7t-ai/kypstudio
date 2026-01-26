@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Season of Joy – KYP Studio AS</title>
-<meta name="description" content="KYP Studio AS – calm, thoughtful digital products.">
+<title>KYP Studio AS</title>
+<meta name="description" content="KYP Studio AS – independent software studio based in Norway. Creator of A Season of Joy.">
 <style>
 :root{
   --bg1:#0b0f1a; --bg2:#080a12;
@@ -78,8 +78,23 @@ p{color:var(--muted); line-height:1.6; margin:10px 0}
   padding:18px;
 }
 .card.full{grid-column: 1/-1}
+.card.full.about{
+  margin-top: 18px;   /* avstand fra hero */
+}
+.about-callout{
+  margin-top:16px;
+  background: rgba(244,210,122,.07);
+  border-color: rgba(244,210,122,.18);
+}
 .card h3{margin:0 0 6px; font-size:16px}
 .small{font-size:13px; color:var(--muted2)}
+.section-title{
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 18px;
+  letter-spacing: .2px;
+  color: var(--text);
+}
 .badge{
   display:inline-flex; gap:8px; align-items:center;
   padding:8px 10px; border-radius:999px;
@@ -117,6 +132,7 @@ article p{color:var(--muted)}
 article ul{color:var(--muted); line-height:1.6}
 article li{margin:6px 0}
 pre{white-space:pre-wrap}
+  
 @media (max-width:720px){
   h1{font-size:34px}
   .card{grid-column: 1/-1}
@@ -131,7 +147,7 @@ pre{white-space:pre-wrap}
 <body>
 <header>
   <div class="nav">
-    <a class="brand" href="/">
+    <a class="brand" href="/about.html">
       <div class="logo" aria-hidden="true"><span>K</span></div>
       <strong>KYP Studio AS</strong>
     </a>
@@ -156,6 +172,52 @@ pre{white-space:pre-wrap}
   </div>
 </section>
 
+<section class="card full about">
+  <h3 class="section-title">About the app</h3>
+
+  <p><strong>Days can get busy.</strong></p>
+
+  <p>
+    They are often driven by things we have to do – meetings, obligations,
+    and to-do lists that never seem to end.
+  </p>
+
+  <p>
+    In the middle of that, it is easy to fall into the trap of letting go of
+    the things that bring you joy.
+  </p>
+
+  <p>
+    <strong>A Season of Joy</strong> is created in recognition of the importance
+    and power of instead <em>adding</em> in activities that you <em>want</em>
+    to do – activities you genuinely look forward to.
+  </p>
+
+  <p>
+    A joy activity can be anything – big or small – as long as it makes you smile,
+    sparks anticipation, or simply feels good to think about.
+  </p>
+
+  <p>
+    The app supports you by helping ensure that you have at least one thing
+    to look forward to each day.
+  </p>
+
+  <div class="card about-callout">
+    <p><strong>Not as a task.</strong></p>
+    <p>Not as a goal to optimize.</p>
+    <p>But as a gentle reminder to listen to what you feel like doing.</p>
+  </div>
+
+    <p style="margin-top:18px;">
+    Small moments of joy, experienced often, can quietly change how life feels.
+  </p>
+
+  <p>
+    This app is here to support you in creating these moments✨
+  </p>
+</section>
+  
 <section class="grid">
   <div class="card">
     <h3>Daily reveal</h3>
