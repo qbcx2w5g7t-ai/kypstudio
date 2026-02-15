@@ -65,6 +65,27 @@ main{max-width:var(--max); margin:0 auto; padding:34px 22px 56px}
   padding:28px;
   box-shadow: var(--shadow);
 }
+
+/* App icon (A Season of Joy) */
+.appicon{
+  width:64px;
+  height:64px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  display:block;
+}
+
+.hero-top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+@media (max-width:720px){
+  .appicon{ width:56px; height:56px; border-radius:14px; }
+}
+  
 .kicker{color:var(--muted); font-size:14px; letter-spacing:.2px}
 h1{margin:10px 0 8px; font-size:42px; line-height:1.05}
 h2{margin:26px 0 12px; font-size:22px}
@@ -163,8 +184,13 @@ pre{white-space:pre-wrap}
 <main>
 
 <section class="hero">
-  <div class="kicker">iOS app</div>
-  <h1>A Season of Joy</h1>
+    <div class="hero-top">
+    <img class="appicon" src="/joy/App Store Icon.png" alt="A Season of Joy app icon">
+    <div>
+      <div class="kicker">iOS app</div>
+      <h1>A Season of Joy</h1>
+    </div>
+  </div>
   <p class="tagline"><span class="tagline-primary">One small joy to look forward to every day.</span><br><span class="tagline-secondary">A gentle habit of welcoming joy into your life – without pressure, without noise.</span></p>
   <div class="btnrow">
     <a class="btn primary" href="#download">Download</a>
