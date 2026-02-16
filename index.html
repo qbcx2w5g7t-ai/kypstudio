@@ -7,16 +7,19 @@
 <meta name="description" content="KYP Studio AS – independent software studio based in Norway. Creator of A Season of Joy.">
 <style>
 :root{
-  --bg1:#111c2e;
-  --bg2:#0f1a2a;
-  --card:rgba(255,255,255,.08);
-  --card2:rgba(255,255,255,.04);
-  --border:rgba(255,255,255,.12);
-  --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.72);
-  --muted2:rgba(255,255,255,.55);
-  --accent:#f4d27a;
-  --shadow: 0 12px 30px rgba(0,0,0,.35);
+  --bg1:#0e1624;   /* nordic deep blue */
+  --bg2:#0b1220;   /* clean midnight */
+  --card:rgba(255,255,255,.075);
+  --card2:rgba(255,255,255,.045);
+  --border:rgba(255,255,255,.14);
+
+  --text:rgba(255,255,255,.93);
+  --muted:rgba(255,255,255,.74);
+  --muted2:rgba(255,255,255,.56);
+
+  --accent:#e9d8a6; /* mer dempet, “premium” */
+  --shadow: 0 12px 28px rgba(0,0,0,.38);
+
   --radius:18px;
   --max: 920px;
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -26,17 +29,18 @@ html,body{height:100%}
 body{
   margin:0; font-family:var(--font);
   color:var(--text);
-  background: radial-gradient(1200px 700px at 20% 5%, #1a2443 0%, transparent 55%),
-              radial-gradient(900px 600px at 85% 15%, rgba(244,210,122,.15) 0%, transparent 55%),
-              linear-gradient(180deg, var(--bg1), var(--bg2));
+  background:
+    radial-gradient(900px 520px at 18% 0%, rgba(70,110,160,.28) 0%, transparent 58%),
+    radial-gradient(780px 520px at 92% 18%, rgba(233,216,166,.12) 0%, transparent 58%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
 }
 a{color:var(--text); text-decoration: none}
 a:hover{opacity:.9}
 header{
   padding:18px 22px;
   position:sticky; top:0;
-  background: rgba(8,10,18,.7);
-  backdrop-filter: blur(10px);
+  background: rgba(10,14,22,.82);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   z-index:10;
 }
@@ -47,7 +51,7 @@ header{
 .brand{display:flex; align-items:center; gap:10px; letter-spacing:.2px}
 .logo{
   width:34px; height:34px; border-radius:12px;
-  background: linear-gradient(135deg, rgba(244,210,122,.25), rgba(255,255,255,.04));
+  background: linear-gradient(135deg, rgba(233,216,166,.22), rgba(255,255,255,.04));
   border:1px solid var(--border);
   display:grid; place-items:center;
   box-shadow: 0 8px 30px rgba(0,0,0,.35);
@@ -127,8 +131,8 @@ p{color:var(--muted); line-height:1.6; margin:10px 0}
 }
 .about-callout{
   margin-top:16px;
-  background: rgba(244,210,122,.07);
-  border-color: rgba(244,210,122,.18);
+  background: rgba(233,216,166,.06);
+  border-color: rgba(233,216,166,.16);
 }
 .card h3{margin:0 0 6px; font-size:16px}
 .small{font-size:13px; color:var(--muted2)}
@@ -155,8 +159,8 @@ p{color:var(--muted); line-height:1.6; margin:10px 0}
   color:var(--text);
 }
 .btn.primary{
-  background: rgba(244,210,122,.22);
-  border-color: rgba(244,210,122,.5);
+  background: rgba(233,216,166,.16);
+  border-color: rgba(233,216,166,.40);
 }
 hr{border:none; border-top:1px solid var(--border); margin:20px 0}
 footer{
