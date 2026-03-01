@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KYP Studio AS</title>
 <meta name="description" content="KYP Studio AS – independent software studio based in Norway. Creator of A Season of Joy.">
+
+<!-- Smart App Banner (vises i Safari på iPhone/iPad) -->
+<meta name="apple-itunes-app" content="app-id=6759006521">
+
 <style>
 :root{
   --bg1:#0f1724;   /* Fargevalg Base-bakgrunn: deep blue-grey */
@@ -149,6 +153,17 @@ p{color:var(--muted); line-height:1.6; margin:10px 0}
   color:var(--text);
   font-size:13px
 }
+  /* App Store badge */
+.store-badge{
+  display:inline-block;
+  margin-top:10px;
+}
+.store-badge img{
+  height: 44px;          /* vanlig, god størrelse */
+  width: auto;
+  display:block;
+}
+.store-badge:hover{opacity:.92}
 .btnrow{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
@@ -159,6 +174,12 @@ p{color:var(--muted); line-height:1.6; margin:10px 0}
 .btn.primary{
   background: rgba(244,210,122,.22);
   border-color: rgba(244,210,122,.5);
+}
+
+/* Sekundær-knapp (brukes i Legal-seksjonen) */
+.btn.secondary{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.14);
 }
 hr{border:none; border-top:1px solid var(--border); margin:20px 0}
 footer{
@@ -217,14 +238,25 @@ pre{white-space:pre-wrap}
       <span class="tagline-secondary">A gentle habit of welcoming joy into your life – without pressure, without noise.</span>
     </p>
     <div class="btnrow">
-      <a class="btn primary" href="#download">Download</a>
+      <!-- Primær-CTA rett til App Store -->
+      <a class="btn primary"
+       href="https://apps.apple.com/app/a-season-of-joy/id6759006521"
+       target="_blank"
+       rel="noopener noreferrer">View on the App Store</a>
+
       <a class="btn" href="/support.html">Support</a>
     </div>
   </div>
 
   <div class="hero-right">
+  <!-- Gjør app-ikonet klikkbart – mange brukere prøver instinktivt dette -->
+  <a href="https://apps.apple.com/app/a-season-of-joy/id6759006521"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Open A Season of Joy in the App Store">
     <img class="appicon-large" src="/joy/app-icon.png" alt="A Season of Joy app icon">
-  </div>
+  </a>
+</div>
 </section>
 
 <section class="card full about">
@@ -291,9 +323,22 @@ pre{white-space:pre-wrap}
     <p>No account required. Optional sync through your own iCloud when enabled.</p>
   </div>
   <div class="card full" id="download">
-    <h3>Download</h3>
-    <p class="small">Coming to the App Store. The download link will appear here once released.</p>
-  </div>
+  <h3>Download</h3>
+
+  <!-- Offisiell App Store-badge (last ned fra Apple og host selv) -->
+  <a class="store-badge"
+     href="https://apps.apple.com/app/a-season-of-joy/id6759006521"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Download A Season of Joy on the App Store">
+    <img src="/assets/app-store-badge.svg" alt="Download on the App Store">
+  </a>
+
+  <p class="small" style="margin-top:10px;">
+    Prefer a direct link?
+    <a href="https://apps.apple.com/app/a-season-of-joy/id6759006521" target="_blank" rel="noopener noreferrer">Open in the App Store</a>
+  </p>
+</div>
 </section>
 
 <section class="grid">
