@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Season of Joy - KYP Studio AS</title>
+<meta name="description" content="A Season of Joy is an iOS app from KYP Studio AS that helps you have one small joy to look forward to every day.">
+<meta name="apple-itunes-app" content="app-id=6759006521">
+<style>
+:root{
+  --linen:#fbf7ef;
+  --clay:#b77a35;
+  --walnut:#2c211a;
+  --olive:#758b6f;
+  --ink:#25201a;
+  --muted:#6f6255;
+  --line:rgba(78,55,34,.16);
+  --paper:#fffdf8;
+  --soft:#f2e6d4;
+  --shadow:0 24px 80px rgba(96,67,38,.16);
+  --max:1080px;
+  --font:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:
+    linear-gradient(120deg, rgba(183,122,53,.13), transparent 34%),
+    linear-gradient(220deg, rgba(242,230,212,.45), transparent 42%),
+    var(--linen);
+}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.82}
+.header{
+  border-bottom:1px solid var(--line);
+  background:rgba(251,247,239,.82);
+  backdrop-filter:blur(16px);
+  position:sticky;
+  top:0;
+  z-index:12;
+}
+.nav{
+  max-width:var(--max);
+  margin:0 auto;
+  min-height:68px;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:760;
+  white-space:nowrap;
+}
+.brand-badge{
+  width:34px;
+  height:34px;
+  border-radius:9px;
+  background:var(--walnut);
+  color:#f8efe3;
+  display:grid;
+  place-items:center;
+}
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:7px;
+  color:var(--muted);
+  font-size:14px;
+}
+.links a{
+  padding:8px 10px;
+  border-radius:8px;
+}
+.links a.active,
+.links a:hover{
+  color:var(--ink);
+  background:rgba(255,255,255,.58);
+}
+main{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:44px 22px 64px;
+}
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0, .98fr) minmax(300px, .76fr);
+  gap:34px;
+  align-items:stretch;
+  min-height:calc(100svh - 154px);
+}
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:34px 0;
+}
+.label{
+  color:var(--clay);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+h1{
+  margin:16px 0;
+  font-size:clamp(46px, 7vw, 82px);
+  line-height:.98;
+  letter-spacing:0;
+}
+.intro{
+  max-width:640px;
+  margin:0;
+  color:var(--muted);
+  font-size:20px;
+  line-height:1.62;
+}
+.actions{
+  margin-top:28px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.btn{
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:rgba(255,255,255,.54);
+  font-weight:750;
+}
+.btn.primary{
+  color:#fff8eb;
+  background:#8f5728;
+  border-color:#8f5728;
+  box-shadow:0 16px 34px rgba(143,87,40,.22);
+}
+.journal{
+  align-self:center;
+  min-height:540px;
+  border:1px solid rgba(78,55,34,.14);
+  border-radius:8px;
+  background:var(--paper);
+  box-shadow:var(--shadow);
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.journal-top{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:flex-start;
+  border-bottom:1px solid var(--line);
+  padding-bottom:24px;
+}
+.app-icon{
+  width:116px;
+  height:116px;
+  border-radius:26px;
+  display:block;
+  box-shadow:0 18px 42px rgba(86,47,25,.2);
+}
+.note{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+  text-align:right;
+}
+.journal h2{
+  margin:36px 0 12px;
+  max-width:340px;
+  font-size:38px;
+  line-height:1.05;
+  letter-spacing:0;
+}
+.journal p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+.store-badge{
+  display:inline-block;
+  margin-top:26px;
+}
+.store-badge img{
+  width:156px;
+  height:auto;
+  display:block;
+}
+.story{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:minmax(220px, 330px) minmax(0, 1fr);
+  gap:42px;
+  padding-top:54px;
+  border-top:1px solid var(--line);
+}
+.story h2{
+  margin:12px 0 0;
+  font-size:32px;
+  line-height:1.16;
+  letter-spacing:0;
+}
+.story-copy p{
+  margin:0 0 18px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.72;
+}
+.story-copy strong{color:var(--ink)}
+.callout{
+  margin:28px 0;
+  border-left:4px solid var(--clay);
+  padding:2px 0 2px 20px;
+}
+.callout p{
+  margin:8px 0;
+  color:var(--ink);
+  font-size:19px;
+}
+.features{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:16px;
+  margin-top:32px;
+}
+.feature{
+  min-height:154px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:22px;
+  background:rgba(255,253,248,.55);
+}
+.feature h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+.feature p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.58;
+}
+.download{
+  margin-top:32px;
+  padding:26px;
+  border:1px solid rgba(183,122,53,.24);
+  border-radius:8px;
+  background:linear-gradient(135deg, rgba(183,122,53,.12), rgba(117,139,111,.10));
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) auto;
+  gap:22px;
+  align-items:center;
+}
+.download h2{
+  margin:0 0 6px;
+  font-size:26px;
+}
+.download p{
+  margin:0;
+  color:var(--muted);
+}
+.legal{
+  margin-top:32px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:14px;
+}
+.legal-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.legal-links a{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.38);
+}
+footer{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 22px 34px;
+  color:var(--muted);
+  font-size:14px;
+}
+@media (max-width:880px){
+  .nav{align-items:flex-start;flex-direction:column}
+  .links{justify-content:flex-start}
+  .hero,.story,.download{grid-template-columns:1fr}
+  .hero{min-height:auto}
+  .journal{min-height:auto}
+}
+@media (max-width:560px){
+  .features{grid-template-columns:1fr}
+  .journal-top{align-items:flex-start;flex-direction:column}
+  .note{text-align:left}
+  .intro{font-size:18px}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="nav">
+    <a class="brand" href="/about.html">
+      <span class="brand-badge" aria-hidden="true">K</span>
+      <span>KYP Studio AS</span>
+    </a>
+    <nav class="links" aria-label="Main navigation">
+      <a href="/joy/" class="active">A Season of Joy</a>
+      <a href="/about.html">About KYP Studio</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/eula.html">EULA</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="label">iOS app</div>
+      <h1>A Season of Joy</h1>
+      <p class="intro">One small joy to look forward to every day. A gentle habit of welcoming joy into your life, without pressure and without noise.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://apps.apple.com/app/a-season-of-joy/id6759006521" target="_blank" rel="noopener noreferrer">View on the App Store</a>
+        <a class="btn" href="/support.html">Support</a>
+      </div>
+    </div>
+    <aside class="journal" aria-label="A Season of Joy app download">
+      <div>
+        <div class="journal-top">
+          <a href="https://apps.apple.com/app/a-season-of-joy/id6759006521" target="_blank" rel="noopener noreferrer" aria-label="Open A Season of Joy in the App Store">
+            <img class="app-icon" src="app-icon.png" alt="A Season of Joy app icon">
+          </a>
+          <p class="note">A quiet place for activities you genuinely look forward to.</p>
+        </div>
+        <h2>Joy always welcomes you back.</h2>
+        <p>Create a personal list of joyful activities and themes that fit your life, then reveal one when it feels right.</p>
+      </div>
+      <a class="store-badge" href="https://apps.apple.com/app/a-season-of-joy/id6759006521" target="_blank" rel="noopener noreferrer" aria-label="Download A Season of Joy on the App Store">
+        <img src="../assets/app-store-badge.svg" alt="Download on the App Store">
+      </a>
+    </aside>
+  </section>
+
+  <section class="story">
+    <div>
+      <p class="label">About the app</p>
+      <h2>Small moments, experienced often.</h2>
+    </div>
+    <div class="story-copy">
+      <p><strong>Days can get busy.</strong></p>
+      <p>They are often driven by things we have to do: meetings, obligations, and to-do lists that never seem to end.</p>
+      <p>In the middle of that, it is easy to fall into the trap of letting go of the things that bring you joy.</p>
+      <p><strong>A Season of Joy</strong> is created in recognition of the importance and power of instead <em>adding</em> in activities that you <em>want</em> to do: activities you genuinely look forward to.</p>
+      <p>A joy activity can be anything, big or small, as long as it makes you smile, sparks anticipation, or simply feels good to think about.</p>
+      <p>The app supports you by helping ensure that you have at least one thing to look forward to each day.</p>
+      <div class="callout">
+        <p><strong>Not as a task.</strong></p>
+        <p>Not as a goal to optimize.</p>
+        <p>But as a gentle reminder to listen to what you feel like doing.</p>
+      </div>
+      <p>Small moments of joy, experienced often, can quietly change how life feels.</p>
+      <p>This app is here to support you in creating these moments.</p>
+    </div>
+  </section>
+
+  <section class="features" aria-label="Features">
+    <div class="feature">
+      <h3>Daily reveal</h3>
+      <p>Open a daily prompt when it feels right, then mark it done when you are ready.</p>
+    </div>
+    <div class="feature">
+      <h3>Your own activities</h3>
+      <p>Create a personal list of joyful activities and themes that fit your life.</p>
+    </div>
+    <div class="feature">
+      <h3>Streaks, gently</h3>
+      <p>Celebrate consistency, and start again any day. Joy always welcomes you back.</p>
+    </div>
+    <div class="feature">
+      <h3>Privacy-first</h3>
+      <p>No account required. Optional sync through your own iCloud when enabled.</p>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <div>
+      <h2>Download</h2>
+      <p>Prefer a direct link? <a href="https://apps.apple.com/app/a-season-of-joy/id6759006521" target="_blank" rel="noopener noreferrer">Open in the App Store</a>.</p>
+    </div>
+    <a class="store-badge" href="https://apps.apple.com/app/a-season-of-joy/id6759006521" target="_blank" rel="noopener noreferrer" aria-label="Download A Season of Joy on the App Store">
+      <img src="../assets/app-store-badge.svg" alt="Download on the App Store">
+    </a>
+  </section>
+
+  <section class="legal" aria-label="Legal links">
+    <span>© 2026 KYP Studio AS · contact@kypstudio.com</span>
+    <div class="legal-links">
+      <a href="/eula.html">EULA</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </section>
+</main>
+<footer>Independent software studio based in Norway.</footer>
+</body>
+</html>
